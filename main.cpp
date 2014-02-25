@@ -62,7 +62,7 @@ void prewittEdge(const Mat& src, Mat& result, uchar thresh)
             magnitude = sqrt(pow(sumEdgeY, 2) + pow(sumEdgeX, 2));
 
             //threshold
-            result.at<uchar>(ysrc - filterOffset, xsrc - filterOffset) = ((magnitude > thresh)? 255 : 0 );
+            result.at<uchar>(ysrc - filterOffset, xsrc - filterOffset) = ((magnitude > thresh)? 0 : 255 );
 
 
         }
